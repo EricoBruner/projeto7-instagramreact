@@ -1,72 +1,27 @@
 import Story from "./Story";
 
 export default function Stories() {
+    const stories = [
+        {imgUrl: "assets/img/9gag.svg", user: "9gag"},
+        {imgUrl: "assets/img/meowed.svg", user: "meowed"},
+        {imgUrl: "assets/img/barked.svg", user: "barked"},
+        {imgUrl: "assets/img/nathanwpylestrangeplanet.svg", user: "nathanwpylestrangeplanet"},
+        {imgUrl: "assets/img/wawawicomics.svg", user: "wawawicomics"},
+        {imgUrl: "assets/img/respondeai.svg", user: "respondeai"},
+        {imgUrl: "assets/img/filomoderna.svg", user: "filomoderna"},
+        {imgUrl: "assets/img/memeriagourmet.svg", user: "memeriagourmet"},
+    ]
+
     return (
         <div class="stories">
-            <Story />
-
-            <div class="story">
-                <div class="imagem">
-                <img src="assets/img/meowed.svg" alt="meowed"/>
-                </div>
-                <div class="usuario">
-                meowed
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                <img src="assets/img/barked.svg" alt="barked"/>
-                </div>
-                <div class="usuario">
-                barked
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                <img src="assets/img/nathanwpylestrangeplanet.svg" alt="nathanwpylestrangeplanet"/>
-                </div>
-                <div class="usuario">
-                nathanwpylestrangeplanet
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                <img src="assets/img/wawawicomics.svg" alt="wawawicomics"/>
-                </div>
-                <div class="usuario">
-                wawawicomics
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                <img src="assets/img/respondeai.svg" alt="respondeai"/>
-                </div>
-                <div class="usuario">
-                respondeai
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                <img src="assets/img/filomoderna.svg" alt="filomoderna"/>
-                </div>
-                <div class="usuario">
-                filomoderna
-                </div>
-            </div>
-
-            <div class="story">
-                <div class="imagem">
-                <img src="assets/img/memeriagourmet.svg" alt="memeriagourmet"/>
-                </div>
-                <div class="usuario">
-                memeriagourmet
-                </div>
-            </div>
+            {stories.map( story => {
+                return (
+                    <Story
+                        img={story.imgUrl}
+                        user={story.user}
+                    />
+                )
+            })}
 
             <div class="setinha">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
