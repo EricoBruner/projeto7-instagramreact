@@ -12,6 +12,7 @@ export default function Post({
 }) {
     let [savedPost, setSavedPost] = useState(null)
     let [likedPost, setLikedPost] = useState(null)
+    let [showHeart, setShowHeart] = useState("DontShowGrowingHeart")
     let [likesAmoutCurrent, setLikesAmoutCurrent] = useState(likesAmout)
 
     function savePost(id) {
@@ -22,13 +23,20 @@ export default function Post({
         }
     }
     
-    function likePost(id, button = false) {
+    function likePost(id, button, image) {
         if(likedPost === id && button) {
             setLikedPost(null)
             setLikesAmoutCurrent(likesAmoutCurrent - 1)
         } else if(likedPost === null) {
             setLikedPost(id)
             setLikesAmoutCurrent(likesAmoutCurrent + 1)
+
+            if(image) {
+                setShowHeart("ShowGrowingHeart")
+                setTimeout(() => {
+                    setShowHeart("DontShowGrowingHeart")
+                }, 500)
+            }
         }
     }
 
@@ -45,7 +53,8 @@ export default function Post({
             </div>
 
             <div class="conteudo">
-                <img data-test="post-image" onClick={() => likePost(id)} src={postUrl} alt={postAlt}/>
+                <img data-test="post-image" onDoubleClick={() => likePost(id, false, true)} src={postUrl} alt={postAlt}/>
+                <ion-icon name="heart" class={showHeart}></ion-icon>
             </div>
 
             <div class="fundo">
