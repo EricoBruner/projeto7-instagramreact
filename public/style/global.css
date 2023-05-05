@@ -191,6 +191,10 @@ body {
   margin-right: 6px;
 }
 
+.post .fundo .acoes .like {
+  color: rgb(255, 48, 64)
+}
+
 .post .fundo .curtidas {
   display: flex;
   align-items: center;

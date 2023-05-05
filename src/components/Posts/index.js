@@ -2,7 +2,8 @@ import Post from "./Post"
 
 export default function Posts() {
     const posts = [
-        {
+        {   
+            id: 1,
             userImg: "assets/img/meowed.svg",
             user: "meowed",
             post: {
@@ -14,10 +15,11 @@ export default function Posts() {
                     userImg: "assets/img/respondeai.svg",
                     user: "respondeai",
                 },
-                amount: "101.523",
+                amount: 101523,
             }
         },
         {
+            id: 2,
             userImg: "assets/img/barked.svg",
             user: "barked",
             post: {
@@ -29,10 +31,11 @@ export default function Posts() {
                     userImg: "assets/img/adorable_animals.svg",
                     user: "adorable_animals",
                 },
-                amount: "99.159",
+                amount: 99159,
             }
         },
         {
+            id: 3,
             userImg: "assets/img/meowed.svg",
             user: "meowed",
             post: {
@@ -44,7 +47,7 @@ export default function Posts() {
                     userImg: "assets/img/respondeai.svg",
                     user: "respondeai",
                 },
-                amount: "101.523",
+                amount: 101523,
             }
         },
     ]
@@ -54,6 +57,7 @@ export default function Posts() {
             {posts.map( post => {
                 return (
                     <Post
+                        id={post.id}
                         user={post.user}
                         userImg={post.userImg}
                         postUrl={post.post.url}
