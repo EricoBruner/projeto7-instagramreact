@@ -41,27 +41,27 @@ export default function Post({
     }
 
     return (
-        <div data-test="post" class="post" id={id}>
-            <div class="topo">
-                <div class="usuario">
+        <div data-test="post" className="post" id={id}>
+            <div className="topo">
+                <div className="usuario">
                 <img src={userImg} alt={user}/>
                 {user}
                 </div>
-                <div class="acoes">
+                <div className="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
 
-            <div class="conteudo">
+            <div className="conteudo">
                 <img data-test="post-image" onDoubleClick={() => likePost(id, false, true)} src={postUrl} alt={postAlt}/>
-                <ion-icon name="heart" class={showHeart}></ion-icon>
+                <ion-icon name="heart" className={showHeart}></ion-icon>
             </div>
 
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
                     {likedPost ? (
-                        <ion-icon data-test="like-post" onClick={() => likePost(id, true)} name="heart" class="like"></ion-icon>
+                        <ion-icon data-test="like-post" onClick={() => likePost(id, true)} name="heart" className="like"></ion-icon>
                     ) : (
                         <ion-icon data-test="like-post" onClick={() => likePost(id, true)} name="heart-outline"></ion-icon>
                     )}
@@ -77,9 +77,9 @@ export default function Post({
                     </div>
                 </div>
 
-                <div class="curtidas">
+                <div className="curtidas">
                     <img src={likesTopUserImg} alt={likesTopUser}/>
-                    <div class="texto">
+                    <div className="texto">
                     Curtido por <strong>{likesTopUser}</strong> e <strong data-test="likes-number">outras {likesAmoutCurrent.toLocaleString()} pessoas</strong>
                     </div>
                 </div>

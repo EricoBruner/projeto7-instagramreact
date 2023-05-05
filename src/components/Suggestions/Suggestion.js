@@ -1,15 +1,15 @@
 export default function Suggestion({user, userImg, reason}) {
     return (
-        <div class="sugestao">
-            <div class="usuario">
+        <div className="sugestao">
+            <div className="usuario">
                 <img src={userImg} alt={user}/>
-                <div class="texto">
-                    <div class="nome">{user}</div>
-                    <div class="razao">{reason}</div>
+                <div className="texto">
+                    <div className="nome">{user}</div>
+                    <div className="razao">{reason}</div>
                 </div>
             </div>
 
-            <div class="seguir">Seguir</div>
+            <div className="seguir">Seguir</div>
         </div>
     )
 }

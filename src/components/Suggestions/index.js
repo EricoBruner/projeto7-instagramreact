@@ -10,8 +10,8 @@ export default function Suggestions() {
     ]
 
     return (
-        <div class="sugestoes">
-            <div class="titulo">
+        <div className="sugestoes">
+            <div className="titulo">
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
@@ -19,6 +19,7 @@ export default function Suggestions() {
             {suggestions.map( suggestion => {
                 return (
                     <Suggestion 
+                        key={suggestion.user}
                         user={suggestion.user}
                         userImg={suggestion.userImg}
                         reason={suggestion.reason}

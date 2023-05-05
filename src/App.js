@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 
 export default function App() {
     return (
-        <div class="root">
+        <div className="root">
             <NavBar />            
             <Body />
         </div>

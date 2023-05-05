@@ -53,10 +53,11 @@ export default function Posts() {
     ]
 
     return (
-        <div class="posts">
+        <div className="posts">
             {posts.map( post => {
                 return (
                     <Post
+                        key={post.id}
                         id={post.id}
                         user={post.user}
                         userImg={post.userImg}
